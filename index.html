@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ansh Sharma | Portfolio & Links</title>
+  <title>Ansh Sharma | Portfolio & Design Showcase</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,18 +14,19 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .ambient-glow {
-      background: radial-gradient(circle at 50% -10%, rgba(59, 130, 246, 0.18), transparent 70%),
-                  radial-gradient(circle at 90% 40%, rgba(147, 51, 234, 0.1), transparent 50%);
+      background: 
+        radial-gradient(circle at 50% -5%, rgba(59, 130, 246, 0.18), transparent 60%),
+        radial-gradient(circle at 95% 35%, rgba(139, 92, 246, 0.12), transparent 50%),
+        radial-gradient(circle at 5% 75%, rgba(16, 185, 129, 0.08), transparent 50%);
     }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen ambient-glow py-8 px-4 sm:px-6 selection:bg-blue-600 selection:text-white">
   <main class="max-w-md mx-auto space-y-4">
 
-    <!-- Hero Profile Header -->
+    <!-- Hero Identity Card -->
     <header class="p-6 rounded-3xl bg-zinc-900/70 border border-zinc-800/80 backdrop-blur-xl shadow-2xl relative overflow-hidden text-center">
       <div class="relative w-24 h-24 mx-auto mb-3">
-        <!-- Save your photo as profile.jpg in the same GitHub repository -->
         <div class="w-full h-full rounded-full ring-2 ring-blue-500/40 p-1">
           <img 
             src="profile.jpg" 
@@ -50,7 +51,7 @@
         "Ahh shit here we go again 👾"
       </p>
 
-      <!-- Primary Action Buttons -->
+      <!-- Quick Action CTAs -->
       <div class="grid grid-cols-2 gap-2.5 mt-5">
         <a href="https://wa.me/919755013858" target="_blank" rel="noopener noreferrer"
            class="py-2.5 px-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center justify-center gap-2 transition duration-200 shadow-lg shadow-emerald-600/20">
@@ -65,7 +66,43 @@
       </div>
     </header>
 
-    <!-- Bento Grid Navigation -->
+    <!-- Interactive Behance Project Embed Card -->
+    <section class="p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-xl shadow-xl space-y-3">
+      <div class="flex items-center justify-between px-1">
+        <div class="flex items-center gap-2">
+          <span class="p-1 rounded-md bg-blue-500/10 text-blue-400">
+            <i data-lucide="palette" class="w-3.5 h-3.5"></i>
+          </span>
+          <span class="text-xs font-bold uppercase tracking-wider text-zinc-300">Featured Behance Project</span>
+        </div>
+        <a href="https://www.behance.net/gallery/219353475" target="_blank" rel="noopener noreferrer" 
+           class="text-[11px] text-blue-400 hover:text-blue-300 flex items-center gap-1 font-medium transition">
+          View on Behance
+          <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+
+      <!-- Responsive Container for the Behance Iframe -->
+      <div class="relative w-full aspect-[404/316] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 shadow-inner">
+        <iframe 
+          src="https://www.behance.net/embed/project/219353475?ilo0=1" 
+          class="w-full h-full border-0"
+          allowfullscreen 
+          loading="lazy" 
+          frameborder="0" 
+          allow="clipboard-write" 
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
+
+      <div class="flex flex-wrap gap-1.5 pt-1">
+        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Graphic Design</span>
+        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Brand Identity</span>
+        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Creative Direction</span>
+      </div>
+    </section>
+
+    <!-- Bento Grid Social & Agency Navigation -->
     <div class="grid grid-cols-2 gap-3">
 
       <!-- Agency Card -->
@@ -85,7 +122,7 @@
         </div>
       </a>
 
-      <!-- Personal Instagram Card -->
+      <!-- Personal IG Card -->
       <a href="https://www.instagram.com/_.ansh._.sharma._" target="_blank" rel="noopener noreferrer"
          class="group p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800 hover:border-pink-500/50 transition duration-300 flex flex-col justify-between">
         <div class="flex items-center justify-between">
@@ -98,7 +135,7 @@
         </div>
       </a>
 
-      <!-- Growth & Creator Instagram Card -->
+      <!-- Growth & Marketing IG Card -->
       <a href="https://www.instagram.com/ansh_grows" target="_blank" rel="noopener noreferrer"
          class="group p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800 hover:border-purple-500/50 transition duration-300 flex flex-col justify-between">
         <div class="flex items-center justify-between">
@@ -120,7 +157,7 @@
           </div>
           <div>
             <h3 class="text-xs font-semibold">LinkedIn Profile</h3>
-            <p class="text-[10px] text-zinc-400">Professional network & client endorsements</p>
+            <p class="text-[10px] text-zinc-400">Professional network & endorsements</p>
           </div>
         </div>
         <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500 group-hover:text-zinc-200 transition"></i>
@@ -128,45 +165,27 @@
 
     </div>
 
-    <!-- Behance-Inspired Case Study Showcase -->
+    <!-- Case Study Highlights -->
     <section class="space-y-3 pt-2">
       <div class="flex items-center justify-between px-1">
-        <span class="text-[10px] uppercase font-bold tracking-wider text-zinc-400">Featured Work & Case Studies</span>
+        <span class="text-[10px] uppercase font-bold tracking-wider text-zinc-400">Case Studies & Growth Highlights</span>
         <span class="text-[10px] text-zinc-500">2026</span>
       </div>
 
       <!-- Case 1 -->
       <article class="rounded-3xl bg-zinc-900/60 border border-zinc-800 overflow-hidden hover:border-zinc-700 transition">
-        <div class="h-36 bg-gradient-to-tr from-blue-950 via-slate-900 to-indigo-950 p-4 flex flex-col justify-end relative">
+        <div class="h-32 bg-gradient-to-tr from-blue-950 via-slate-900 to-indigo-950 p-4 flex flex-col justify-end relative">
           <span class="text-[9px] uppercase tracking-widest text-blue-400 font-bold">Short-Form Content Strategy</span>
           <h4 class="text-sm font-bold text-white mt-0.5">Organic Reach Engine (+340% Growth)</h4>
         </div>
         <div class="p-4 space-y-2">
           <p class="text-xs text-zinc-300 leading-relaxed">
-            Content hook frameworks, retention pacing, and viral distribution models for high-growth brands.
+            Content hook frameworks, retention pacing, and viral distribution models for scaling consumer brands.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-1">
             <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Reels</span>
             <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Performance</span>
             <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Brand Strategy</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Case 2 -->
-      <article class="rounded-3xl bg-zinc-900/60 border border-zinc-800 overflow-hidden hover:border-zinc-700 transition">
-        <div class="h-36 bg-gradient-to-tr from-emerald-950 via-zinc-900 to-teal-950 p-4 flex flex-col justify-end relative">
-          <span class="text-[9px] uppercase tracking-widest text-emerald-400 font-bold">Creative Direction</span>
-          <h4 class="text-sm font-bold text-white mt-0.5">AeroGrow Media Brand Identity</h4>
-        </div>
-        <div class="p-4 space-y-2">
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            End-to-end visual systems, client pitch decks, and digital acquisition funnels.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Photoshop</span>
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Illustrator</span>
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Funnel Design</span>
           </div>
         </div>
       </article>
