@@ -1,199 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ansh Sharma | Portfolio & Design Showcase</title>
+  <title>Ansh Sharma — Graphic Design & Marketing Portfolio 2026</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .ambient-glow {
-      background: 
-        radial-gradient(circle at 50% -5%, rgba(59, 130, 246, 0.18), transparent 60%),
-        radial-gradient(circle at 95% 35%, rgba(139, 92, 246, 0.12), transparent 50%),
-        radial-gradient(circle at 5% 75%, rgba(16, 185, 129, 0.08), transparent 50%);
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .deck-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
   </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen ambient-glow py-8 px-4 sm:px-6 selection:bg-blue-600 selection:text-white">
-  <main class="max-w-md mx-auto space-y-4">
+<body class="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-blue-600 selection:text-white deck-grid">
 
-    <!-- Hero Identity Card -->
-    <header class="p-6 rounded-3xl bg-zinc-900/70 border border-zinc-800/80 backdrop-blur-xl shadow-2xl relative overflow-hidden text-center">
-      <div class="relative w-24 h-24 mx-auto mb-3">
-        <div class="w-full h-full rounded-full ring-2 ring-blue-500/40 p-1">
+  <!-- Top Sticky Behance-Style Navigation -->
+  <nav class="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/80 px-4 py-3">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+        <span class="font-display font-bold text-sm tracking-wide">ANSH SHARMA</span>
+        <span class="text-xs text-zinc-500 hidden sm:inline">| 2026 PORTFOLIO</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/919755013858" target="_blank"
+           class="px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold hover:bg-emerald-500 hover:text-white transition flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- ================= SLIDE 1: THE BEHANCE HERO COVER ================= -->
+    <section class="rounded-3xl bg-gradient-to-b from-zinc-900 to-zinc-950 border border-zinc-800 p-6 sm:p-10 relative overflow-hidden shadow-2xl">
+      <!-- Decorative Backdrop Lights -->
+      <div class="absolute -top-24 -right-24 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col-reverse md:flex-row items-center gap-8 justify-between">
+        
+        <!-- Typography / Intro -->
+        <div class="space-y-4 text-center md:text-left flex-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700 text-xs font-semibold text-blue-400">
+            <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+            GRAPHIC DESIGN & PERFORMANCE MARKETING
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight leading-none text-white uppercase">
+            Visuals That <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Convert.</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-zinc-300 max-w-lg leading-relaxed">
+            I help modern brands stand out through high-impact visual design, brand identity systems, and viral social growth.
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2 justify-center md:justify-start">
+            <span class="px-3 py-1 text-xs rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300">Founder @ AeroGrow Media</span>
+            <span class="px-3 py-1 text-xs rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300">BBA Marketing</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 justify-center md:justify-start">
+            <a href="https://wa.me/919755013858" target="_blank"
+               class="px-5 py-3 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center gap-2 shadow-lg shadow-blue-600/30 transition">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              Start a Project
+            </a>
+            <a href="#work" class="px-5 py-3 rounded-2xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-300 font-semibold text-xs flex items-center gap-2 transition">
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+              Explore Portfolio
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Hero Card (Photo with Deck Frame) -->
+        <div class="relative w-56 sm:w-64 aspect-[4/5] rounded-3xl overflow-hidden border-2 border-zinc-700/80 shadow-2xl group">
           <img 
             src="profile.jpg" 
             alt="Ansh Sharma" 
-            class="w-full h-full rounded-full object-cover object-top bg-zinc-800"
-            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80';"
+            class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';"
           />
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+          <div class="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-700/60 text-left">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-bold text-white">Ansh Sharma</p>
+                <p class="text-[10px] text-zinc-400">Creative Lead & Marketer</p>
+              </div>
+              <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">2026</span>
+            </div>
+          </div>
         </div>
-        <span class="absolute bottom-1 right-1 flex h-4 w-4">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-zinc-950"></span>
-        </span>
-      </div>
 
-      <div class="flex items-center justify-center gap-1.5">
-        <h1 class="text-xl font-extrabold tracking-tight">Ansh Sharma</h1>
-        <i data-lucide="badge-check" class="w-4 h-4 text-blue-500 fill-blue-500/20"></i>
-      </div>
-      <p class="text-xs text-zinc-400 mt-0.5">Founder @ AeroGrow Media • Digital Marketer</p>
-      
-      <p class="text-xs text-zinc-300 italic mt-2.5 px-4 py-1.5 rounded-full bg-zinc-800/60 inline-block border border-zinc-700/50">
-        "Ahh shit here we go again 👾"
-      </p>
-
-      <!-- Quick Action CTAs -->
-      <div class="grid grid-cols-2 gap-2.5 mt-5">
-        <a href="https://wa.me/919755013858" target="_blank" rel="noopener noreferrer"
-           class="py-2.5 px-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center justify-center gap-2 transition duration-200 shadow-lg shadow-emerald-600/20">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          Chat on WhatsApp
-        </a>
-        <a href="https://www.instagram.com/aerogrowmedia" target="_blank" rel="noopener noreferrer"
-           class="py-2.5 px-3 rounded-2xl bg-zinc-800/80 hover:bg-zinc-700/90 text-zinc-200 text-xs font-semibold flex items-center justify-center gap-2 border border-zinc-700/60 transition duration-200">
-          <i data-lucide="building-2" class="w-4 h-4"></i>
-          AeroGrow Media
-        </a>
-      </div>
-    </header>
-
-    <!-- Interactive Behance Project Embed Card -->
-    <section class="p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800/90 backdrop-blur-xl shadow-xl space-y-3">
-      <div class="flex items-center justify-between px-1">
-        <div class="flex items-center gap-2">
-          <span class="p-1 rounded-md bg-blue-500/10 text-blue-400">
-            <i data-lucide="palette" class="w-3.5 h-3.5"></i>
-          </span>
-          <span class="text-xs font-bold uppercase tracking-wider text-zinc-300">Featured Behance Project</span>
-        </div>
-        <a href="https://www.behance.net/gallery/219353475" target="_blank" rel="noopener noreferrer" 
-           class="text-[11px] text-blue-400 hover:text-blue-300 flex items-center gap-1 font-medium transition">
-          View on Behance
-          <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-        </a>
-      </div>
-
-      <!-- Responsive Container for the Behance Iframe -->
-      <div class="relative w-full aspect-[404/316] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 shadow-inner">
-        <iframe 
-          src="https://www.behance.net/embed/project/219353475?ilo0=1" 
-          class="w-full h-full border-0"
-          allowfullscreen 
-          loading="lazy" 
-          frameborder="0" 
-          allow="clipboard-write" 
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-      </div>
-
-      <div class="flex flex-wrap gap-1.5 pt-1">
-        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Graphic Design</span>
-        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Brand Identity</span>
-        <span class="px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] text-zinc-300">Creative Direction</span>
       </div>
     </section>
 
-    <!-- Bento Grid Social & Agency Navigation -->
-    <div class="grid grid-cols-2 gap-3">
-
-      <!-- Agency Card -->
-      <a href="https://www.instagram.com/aerogrowmedia" target="_blank" rel="noopener noreferrer"
-         class="col-span-2 group p-4 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-zinc-900/50 to-blue-950/30 border border-zinc-800 hover:border-blue-500/50 transition-all duration-300">
-        <div class="flex items-start justify-between">
-          <div>
-            <span class="text-[10px] uppercase font-bold tracking-wider text-blue-400">Marketing Agency</span>
-            <h2 class="text-base font-bold group-hover:text-blue-400 transition-colors">AeroGrow Media</h2>
-            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
-              Performance marketing, organic content scaling, and brand growth systems.
-            </p>
-          </div>
-          <div class="p-2 rounded-xl bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all">
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-          </div>
-        </div>
-      </a>
-
-      <!-- Personal IG Card -->
-      <a href="https://www.instagram.com/_.ansh._.sharma._" target="_blank" rel="noopener noreferrer"
-         class="group p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800 hover:border-pink-500/50 transition duration-300 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <i data-lucide="camera" class="w-4 h-4 text-pink-400"></i>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-pink-400 transition-colors"></i>
-        </div>
-        <div class="mt-4">
-          <p class="text-xs font-bold text-zinc-100 group-hover:text-pink-400 transition-colors">Personal Life</p>
-          <p class="text-[10px] text-zinc-400 truncate">_.ansh._.sharma._</p>
-        </div>
-      </a>
-
-      <!-- Growth & Marketing IG Card -->
-      <a href="https://www.instagram.com/ansh_grows" target="_blank" rel="noopener noreferrer"
-         class="group p-4 rounded-3xl bg-zinc-900/70 border border-zinc-800 hover:border-purple-500/50 transition duration-300 flex flex-col justify-between">
-        <div class="flex items-center justify-between">
-          <i data-lucide="trending-up" class="w-4 h-4 text-purple-400"></i>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-purple-400 transition-colors"></i>
-        </div>
-        <div class="mt-4">
-          <p class="text-xs font-bold text-zinc-100 group-hover:text-purple-400 transition-colors">Growth & Marketing</p>
-          <p class="text-[10px] text-zinc-400 truncate">@ansh_grows</p>
-        </div>
-      </a>
-
-      <!-- LinkedIn Link Card -->
-      <a href="https://www.linkedin.com/in/ansh-sharma-464410304/" target="_blank" rel="noopener noreferrer"
-         class="col-span-2 group p-3.5 rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-blue-400/50 transition flex items-center justify-between">
-        <div class="flex items-center gap-2.5">
-          <div class="p-1.5 rounded-lg bg-blue-500/10 text-blue-400">
-            <i data-lucide="linkedin" class="w-4 h-4"></i>
-          </div>
-          <div>
-            <h3 class="text-xs font-semibold">LinkedIn Profile</h3>
-            <p class="text-[10px] text-zinc-400">Professional network & endorsements</p>
-          </div>
-        </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-zinc-500 group-hover:text-zinc-200 transition"></i>
-      </a>
-
-    </div>
-
-    <!-- Case Study Highlights -->
-    <section class="space-y-3 pt-2">
+    <!-- ================= SLIDE 2: CREATIVE TOOLBOX / SOFTWARE ================= -->
+    <section class="space-y-4">
       <div class="flex items-center justify-between px-1">
-        <span class="text-[10px] uppercase font-bold tracking-wider text-zinc-400">Case Studies & Growth Highlights</span>
-        <span class="text-[10px] text-zinc-500">2026</span>
+        <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-400">Creative Arsenal & Tech Stack</h2>
+        <span class="text-xs text-zinc-500">Tools of Craft</span>
       </div>
 
-      <!-- Case 1 -->
-      <article class="rounded-3xl bg-zinc-900/60 border border-zinc-800 overflow-hidden hover:border-zinc-700 transition">
-        <div class="h-32 bg-gradient-to-tr from-blue-950 via-slate-900 to-indigo-950 p-4 flex flex-col justify-end relative">
-          <span class="text-[9px] uppercase tracking-widest text-blue-400 font-bold">Short-Form Content Strategy</span>
-          <h4 class="text-sm font-bold text-white mt-0.5">Organic Reach Engine (+340% Growth)</h4>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 font-bold font-mono flex items-center justify-center text-sm border border-blue-500/20">Ps</div>
+          <div>
+            <p class="text-xs font-bold text-white">Photoshop</p>
+            <p class="text-[10px] text-zinc-400">Compositing & Posters</p>
+          </div>
         </div>
-        <div class="p-4 space-y-2">
-          <p class="text-xs text-zinc-300 leading-relaxed">
-            Content hook frameworks, retention pacing, and viral distribution models for scaling consumer brands.
+
+        <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 font-bold font-mono flex items-center justify-center text-sm border border-amber-500/20">Ai</div>
+          <div>
+            <p class="text-xs font-bold text-white">Illustrator</p>
+            <p class="text-[10px] text-zinc-400">Logos & Vectors</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 font-bold font-mono flex items-center justify-center text-sm border border-purple-500/20">Pr</div>
+          <div>
+            <p class="text-xs font-bold text-white">Premiere Pro</p>
+            <p class="text-[10px] text-zinc-400">Short-Form & Reels</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Growth Engine</p>
+            <p class="text-[10px] text-zinc-400">Meta Ads & Organic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SLIDE 3: BEHANCE PRESENTATION SLIDES (WORK) ================= -->
+    <section id="work" class="space-y-6 pt-4">
+      <div class="flex items-center justify-between px-1">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-white">Featured Project Decks</h2>
+          <p class="text-xs text-zinc-400">Real client transformations and design solutions</p>
+        </div>
+        <span class="text-xs font-mono text-zinc-500">03 PROJECTS</span>
+      </div>
+
+      <!-- PROJECT SLIDE 01 -->
+      <article class="rounded-3xl bg-zinc-900/70 border border-zinc-800 overflow-hidden shadow-xl hover:border-zinc-700 transition">
+        <!-- Visual Mockup Canvas -->
+        <div class="h-64 sm:h-80 bg-gradient-to-tr from-slate-950 via-indigo-950 to-blue-950 p-6 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#60a5fa_1px,transparent_1px)] [background-size:20px_20px]"></div>
+          
+          <div class="relative z-10 flex justify-between items-start">
+            <span class="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold font-mono">CASE 01</span>
+            <span class="text-xs text-zinc-400 font-mono">BRAND IDENTITY & CONTENT</span>
+          </div>
+
+          <div class="relative z-10 space-y-1">
+            <span class="text-xs uppercase tracking-widest text-blue-400 font-bold">AeroGrow Media Framework</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Organic Content Scaling Engine (+340% Reach)</h3>
+          </div>
+        </div>
+
+        <!-- Project Details / Deliverables -->
+        <div class="p-6 sm:p-8 space-y-4">
+          <p class="text-sm text-zinc-300 leading-relaxed">
+            Constructed a 30-day viral short-form distribution loop. Created bold thumbnail visual architectures, hook frameworks, and narrative pacing resulting in 340% month-over-month reach expansion.
           </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Reels</span>
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Performance</span>
-            <span class="px-2 py-0.5 rounded-md bg-zinc-800 text-[10px] text-zinc-300">Brand Strategy</span>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Reels Architecture</span>
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Visual Identity</span>
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Viral Hooks</span>
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Photoshop</span>
           </div>
         </div>
       </article>
+
+      <!-- PROJECT SLIDE 02 -->
+      <article class="rounded-3xl bg-zinc-900/70 border border-zinc-800 overflow-hidden shadow-xl hover:border-zinc-700 transition">
+        <!-- Visual Mockup Canvas -->
+        <div class="h-64 sm:h-80 bg-gradient-to-tr from-zinc-950 via-emerald-950 to-teal-950 p-6 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+          <div class="relative z-10 flex justify-between items-start">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold font-mono">CASE 02</span>
+            <span class="text-xs text-zinc-400 font-mono">CREATIVE DIRECTION</span>
+          </div>
+
+          <div class="relative z-10 space-y-1">
+            <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold">Studio Showcase</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">AeroGrow Media Agency Identity Deck</h3>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8 space-y-4">
+          <p class="text-sm text-zinc-300 leading-relaxed">
+            Full design system development for AeroGrow Media—encompassing typography rules, pitch deck templates, social media design guidelines, and client acquisition assets.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Brand Identity</span>
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Pitch Decks</span>
+            <span class="px-3 py-1 rounded-md bg-zinc-800 text-xs text-zinc-300 font-medium">Illustrator</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ================= SLIDE 4: CONNECT & PROFILES ================= -->
+    <section class="rounded-3xl bg-zinc-900/60 border border-zinc-800 p-6 sm:p-8 space-y-6">
+      <div>
+        <h2 class="font-display text-xl font-bold text-white">Connect & Direct Channels</h2>
+        <p class="text-xs text-zinc-400">Available for client collaborations, growth consulting, and design projects</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919755013858" target="_blank"
+           class="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-800/40 hover:border-emerald-500 flex items-center justify-between group transition">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">WhatsApp Chat</p>
+              <p class="text-[11px] text-zinc-400">+91 9755013858</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-emerald-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+        </a>
+
+        <!-- AeroGrow Media -->
+        <a href="https://www.instagram.com/aerogrowmedia" target="_blank"
+           class="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-blue-500 flex items-center justify-between group transition">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-400">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">AeroGrow Media</p>
+              <p class="text-[11px] text-zinc-400">@aerogrowmedia</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+        </a>
+
+        <!-- Creator IG -->
+        <a href="https://www.instagram.com/ansh_grows" target="_blank"
+           class="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-purple-500 flex items-center justify-between group transition">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-purple-500/20 text-purple-400">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Marketing Page</p>
+              <p class="text-[11px] text-zinc-400">@ansh_grows</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+        </a>
+
+        <!-- Personal IG -->
+        <a href="https://www.instagram.com/_.ansh._.sharma._" target="_blank"
+           class="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-pink-500 flex items-center justify-between group transition">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-pink-500/20 text-pink-400">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Personal Profile</p>
+              <p class="text-[11px] text-zinc-400">_.ansh._.sharma._</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-pink-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+        </a>
+      </div>
+
+      <!-- LinkedIn Link -->
+      <a href="https://www.linkedin.com/in/ansh-sharma-464410304/" target="_blank"
+         class="p-4 rounded-2xl bg-blue-950/20 border border-blue-900/30 hover:border-blue-500 flex items-center justify-between group transition">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-400">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">Connect on LinkedIn</p>
+            <p class="text-[11px] text-zinc-400">Professional network & endorsements</p>
+          </div>
+        </div>
+        <i data-lucide="arrow-up-right" class="w-4 h-4 text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+      </a>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-[10px] text-zinc-600 pt-4 pb-2">
-      © <span id="year"></span> Ansh Sharma • AeroGrow Media
+    <footer class="text-center py-6 text-xs text-zinc-600 border-t border-zinc-900 space-y-1">
+      <p>© <span id="year"></span> Ansh Sharma. All rights reserved.</p>
+      <p class="text-[10px] text-zinc-700">Designed as a Behance-Style Deck Portfolio</p>
     </footer>
 
   </main>
