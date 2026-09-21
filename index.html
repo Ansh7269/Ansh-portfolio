@@ -17,12 +17,38 @@
       font-family: 'Bebas Neue', sans-serif;
       letter-spacing: 0.03em;
     }
-    /* AeroGrow Architectural Grid */
+    /* Architectural background grid */
     .aerogrow-grid {
-      background-size: 50px 50px;
+      background-size: 48px 48px;
       background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    }
+
+    /* Ambient floating glow keyframe animations */
+    @keyframes floatOrb1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(40px, -60px) scale(1.15); }
+      66% { transform: translate(-30px, 30px) scale(0.9); }
+    }
+    @keyframes floatOrb2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(-50px, 40px) scale(1.1); }
+      66% { transform: translate(30px, -40px) scale(0.95); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.12; }
+      50% { opacity: 0.22; }
+    }
+
+    .orb-1 {
+      animation: floatOrb1 16s infinite ease-in-out, pulseGlow 8s infinite ease-in-out;
+    }
+    .orb-2 {
+      animation: floatOrb2 20s infinite ease-in-out, pulseGlow 10s infinite ease-in-out;
+    }
+    .orb-3 {
+      animation: floatOrb1 14s infinite ease-in-out reverse;
     }
   </style>
   <script>
@@ -30,7 +56,7 @@
       theme: {
         extend: {
           colors: {
-            brand: '#b4f400',       /* AeroGrow Electric Lime */
+            brand: '#b4f400',
             brandHover: '#a3db00',
             darkcard: '#121212',
             darkborder: '#232323'
@@ -40,12 +66,26 @@
     }
   </script>
 </head>
-<body class="bg-[#090909] text-zinc-100 min-h-screen selection:bg-brand selection:text-black">
+<body class="bg-[#080808] text-zinc-100 min-h-screen selection:bg-brand selection:text-black relative overflow-x-hidden">
+
+  <!-- ================= DYNAMIC AMBIENT BACKGROUND ANIMATION ================= -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <!-- Neon Electric Lime Floating Orb (Top Center/Left) -->
+    <div class="orb-1 absolute -top-32 left-1/4 w-[480px] h-[480px] rounded-full bg-brand/20 blur-[140px]"></div>
+
+    <!-- Deep Emerald Glow Orb (Mid Right) -->
+    <div class="orb-2 absolute top-1/3 -right-24 w-[420px] h-[420px] rounded-full bg-emerald-500/15 blur-[150px]"></div>
+
+    <!-- Accent Lime Orb (Bottom Left) -->
+    <div class="orb-3 absolute bottom-24 -left-20 w-[380px] h-[380px] rounded-full bg-brand/10 blur-[130px]"></div>
+
+    <!-- Subtle Vignette / Contrast Shading -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#080808]/40 to-[#080808]"></div>
+  </div>
 
   <!-- ================= TOP NAVIGATION BAR ================= -->
-  <header class="sticky top-0 z-50 bg-[#090909]/90 backdrop-blur-md border-b border-zinc-800/80 px-4 sm:px-8 py-3.5">
+  <header class="sticky top-0 z-50 bg-[#080808]/85 backdrop-blur-xl border-b border-zinc-800/80 px-4 sm:px-8 py-3.5">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-1 group">
         <span class="font-bebas text-2xl tracking-wider text-white">ANSH SHARMA</span>
         <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
@@ -61,17 +101,17 @@
 
       <!-- Action Button -->
       <a href="https://wa.me/919755013858" target="_blank"
-         class="px-4 sm:px-5 py-2 rounded-full bg-brand hover:bg-brandHover text-black font-extrabold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-brand/20 transition">
+         class="px-4 sm:px-5 py-2 rounded-full bg-brand hover:bg-brandHover text-black font-extrabold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-lg shadow-brand/20 transition hover:scale-105">
         <i data-lucide="zap" class="w-3.5 h-3.5 fill-black"></i>
         <span>Hire Me</span>
       </a>
     </div>
   </header>
 
-  <main class="aerogrow-grid">
+  <main class="aerogrow-grid relative z-10">
 
     <!-- ================= HERO SECTION ================= -->
-    <section class="max-w-5xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-12 border-b border-zinc-900">
+    <section class="max-w-5xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-12 border-b border-zinc-900/80">
       <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
         
         <!-- Headline & Bio -->
@@ -79,14 +119,14 @@
           
           <!-- Category Badges -->
           <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-darkcard border border-darkborder text-[11px] font-bold text-brand uppercase tracking-wider">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand animate-pulse"></span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-darkcard/90 backdrop-blur-md border border-darkborder text-[11px] font-bold text-brand uppercase tracking-wider shadow-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand animate-ping"></span>
               Performance Marketer
             </span>
-            <span class="px-3 py-1 rounded-full bg-darkcard border border-darkborder text-[11px] font-bold text-zinc-300 uppercase tracking-wider">
+            <span class="px-3 py-1 rounded-full bg-darkcard/90 backdrop-blur-md border border-darkborder text-[11px] font-bold text-zinc-300 uppercase tracking-wider">
               Creatives
             </span>
-            <span class="px-3 py-1 rounded-full bg-darkcard border border-darkborder text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
+            <span class="px-3 py-1 rounded-full bg-darkcard/90 backdrop-blur-md border border-darkborder text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
               VOL. 2026
             </span>
           </div>
@@ -94,7 +134,7 @@
           <!-- Main Bebas Title -->
           <div class="space-y-1">
             <p class="text-xs uppercase font-extrabold tracking-widest text-zinc-500">A bit of 2025 and a bit of 2026</p>
-            <h1 class="font-bebas text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-white uppercase tracking-tight">
+            <h1 class="font-bebas text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-white uppercase tracking-tight drop-shadow-sm">
               PORT<span class="text-brand italic">FOLIO.</span>
             </h1>
             <p class="text-sm sm:text-base font-bold text-zinc-200 pt-1">
@@ -115,7 +155,7 @@
               WhatsApp Direct
             </a>
             <a href="https://www.instagram.com/aerogrowmedia" target="_blank"
-               class="px-6 py-3 rounded-full bg-darkcard hover:bg-zinc-900 text-zinc-200 border border-darkborder font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 transition hover:scale-105">
+               class="px-6 py-3 rounded-full bg-darkcard/90 hover:bg-zinc-900 text-zinc-200 border border-darkborder font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 transition hover:scale-105">
               <i data-lucide="building-2" class="w-4 h-4 text-brand"></i>
               AeroGrow Media
             </a>
@@ -124,7 +164,7 @@
         </div>
 
         <!-- Hero Profile Frame Card -->
-        <div class="w-64 sm:w-72 rounded-3xl bg-darkcard border border-darkborder p-3.5 shadow-2xl space-y-3">
+        <div class="w-64 sm:w-72 rounded-3xl bg-darkcard/90 backdrop-blur-md border border-darkborder p-3.5 shadow-2xl space-y-3">
           <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950">
             <img 
               src="profile.jpg.png" 
@@ -152,19 +192,19 @@
 
       <!-- ================= KEY STATS TILES ================= -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-12 sm:mt-14">
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder text-center md:text-left">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder text-center md:text-left hover:border-brand/40 transition">
           <h2 class="font-bebas text-4xl sm:text-5xl text-brand leading-none">+340%</h2>
           <p class="text-[11px] text-zinc-400 mt-1">Organic Reach Spike</p>
         </div>
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder text-center md:text-left">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder text-center md:text-left hover:border-brand/40 transition">
           <h2 class="font-bebas text-4xl sm:text-5xl text-white leading-none">3X</h2>
           <p class="text-[11px] text-zinc-400 mt-1">ROAS on Ad Campaigns</p>
         </div>
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder text-center md:text-left">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder text-center md:text-left hover:border-brand/40 transition">
           <h2 class="font-bebas text-4xl sm:text-5xl text-brand leading-none">125K</h2>
           <p class="text-[11px] text-zinc-400 mt-1">Audience Reach</p>
         </div>
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder text-center md:text-left">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder text-center md:text-left hover:border-brand/40 transition">
           <h2 class="font-bebas text-4xl sm:text-5xl text-white leading-none">+215%</h2>
           <p class="text-[11px] text-zinc-400 mt-1">Avg. Business Growth</p>
         </div>
@@ -172,7 +212,7 @@
     </section>
 
     <!-- ================= ARSENAL: SOFTWARE LOADOUT ================= -->
-    <section id="loadout" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 border-b border-zinc-900 space-y-6">
+    <section id="loadout" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 border-b border-zinc-900/80 space-y-6">
       <div class="flex items-center justify-between">
         <div>
           <p class="text-xs uppercase font-extrabold tracking-widest text-brand">/// SOFTWARE LOADOUT</p>
@@ -183,7 +223,7 @@
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <!-- Photoshop -->
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-3">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-3">
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Ps</div>
           <div>
             <h3 class="text-xs font-bold text-white">Photoshop</h3>
@@ -192,7 +232,7 @@
         </div>
 
         <!-- Illustrator -->
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-3">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-3">
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Ai</div>
           <div>
             <h3 class="text-xs font-bold text-white">Illustrator</h3>
@@ -201,7 +241,7 @@
         </div>
 
         <!-- Premiere Pro / Editing -->
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-3">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-3">
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Pr</div>
           <div>
             <h3 class="text-xs font-bold text-white">Editing</h3>
@@ -210,7 +250,7 @@
         </div>
 
         <!-- Growth Hub -->
-        <div class="p-5 rounded-2xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-3">
+        <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-3">
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand flex items-center justify-center">
             <i data-lucide="trending-up" class="w-5 h-5"></i>
           </div>
@@ -223,7 +263,7 @@
     </section>
 
     <!-- ================= FEATURED PROJECT DECKS ================= -->
-    <section id="work" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 border-b border-zinc-900 space-y-6">
+    <section id="work" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 border-b border-zinc-900/80 space-y-6">
       <div class="flex items-center justify-between">
         <div>
           <p class="text-xs uppercase font-extrabold tracking-widest text-brand">FEATURED PROJECT DECKS</p>
@@ -235,7 +275,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Case 01 -->
-        <article class="p-6 sm:p-8 rounded-3xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-5 flex flex-col justify-between">
+        <article class="p-6 sm:p-8 rounded-3xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-5 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-brand font-mono text-[11px] font-bold">STAGE 01</span>
@@ -262,7 +302,7 @@
         </article>
 
         <!-- Case 02 -->
-        <article class="p-6 sm:p-8 rounded-3xl bg-darkcard border border-darkborder hover:border-brand/40 transition space-y-5 flex flex-col justify-between">
+        <article class="p-6 sm:p-8 rounded-3xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-5 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-brand font-mono text-[11px] font-bold">STAGE 02</span>
@@ -306,7 +346,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
         <!-- WhatsApp -->
         <a href="https://wa.me/919755013858" target="_blank"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="message-circle" class="w-5 h-5"></i>
@@ -321,7 +361,7 @@
 
         <!-- AeroGrow Media -->
         <a href="https://www.instagram.com/aerogrowmedia" target="_blank"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="building-2" class="w-5 h-5"></i>
@@ -336,7 +376,7 @@
 
         <!-- Growth IG -->
         <a href="https://www.instagram.com/ansh_grows" target="_blank"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="trending-up" class="w-5 h-5"></i>
@@ -351,7 +391,7 @@
 
         <!-- Personal IG -->
         <a href="https://www.instagram.com/_.ansh._.sharma._" target="_blank"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="instagram" class="w-5 h-5"></i>
@@ -366,7 +406,7 @@
 
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/ansh-sharma-464410304/" target="_blank"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="linkedin" class="w-5 h-5"></i>
@@ -381,7 +421,7 @@
 
         <!-- Email -->
         <a href="mailto:ansh.sharma.work3@gmail.com"
-           class="p-4 rounded-2xl bg-darkcard border border-darkborder hover:border-brand transition flex items-center justify-between group">
+           class="p-4 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand transition flex items-center justify-between group">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-xl bg-zinc-900 text-brand">
               <i data-lucide="mail" class="w-5 h-5"></i>
@@ -399,7 +439,7 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-zinc-900 py-8 px-4 sm:px-8 bg-[#090909]">
+  <footer class="border-t border-zinc-900/80 py-8 px-4 sm:px-8 bg-[#080808] relative z-10">
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 text-center sm:text-left">
       <div class="flex items-center gap-1.5">
         <span class="font-bebas text-lg text-white">ANSH SHARMA</span>
