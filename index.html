@@ -3,21 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ansh Sharma | Portfolio 2026</title>
+  <title>Ansh Sharma | Performance Marketer & Creative Strategist</title>
+
+  <!-- Google Fonts: Bebas Neue & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#b4f400',        /* AeroGrow Electric Lime */
+            brandHover: '#a3db00',
+            darkcard: '#121212',
+            darkborder: '#232323'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            bebas: ['"Bebas Neue"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
   <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .font-bebas {
-      font-family: 'Bebas Neue', sans-serif;
-      letter-spacing: 0.03em;
-    }
-    /* Architectural background grid */
+    /* Architectural Background Grid */
     .aerogrow-grid {
       background-size: 48px 48px;
       background-image: 
@@ -25,7 +45,7 @@
         linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
     }
 
-    /* Ambient floating glow keyframe animations */
+    /* Ambient Floating Glow Animations */
     @keyframes floatOrb1 {
       0%, 100% { transform: translate(0px, 0px) scale(1); }
       33% { transform: translate(40px, -60px) scale(1.15); }
@@ -51,22 +71,8 @@
       animation: floatOrb1 14s infinite ease-in-out reverse;
     }
   </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#b4f400',
-            brandHover: '#a3db00',
-            darkcard: '#121212',
-            darkborder: '#232323'
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-[#080808] text-zinc-100 min-h-screen selection:bg-brand selection:text-black relative overflow-x-hidden">
+<body class="bg-[#080808] text-zinc-100 min-h-screen selection:bg-brand selection:text-black relative overflow-x-hidden font-sans">
 
   <!-- ================= DYNAMIC AMBIENT BACKGROUND ANIMATION ================= -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -86,18 +92,11 @@
   <!-- ================= TOP NAVIGATION BAR ================= -->
   <header class="sticky top-0 z-50 bg-[#080808]/85 backdrop-blur-xl border-b border-zinc-800/80 px-4 sm:px-8 py-3.5">
     <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-1 group">
         <span class="font-bebas text-2xl tracking-wider text-white">ANSH SHARMA</span>
         <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
       </a>
-
-      <!-- Desktop Links -->
-      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-zinc-400">
-        <a href="#about" class="hover:text-white transition">About</a>
-        <a href="#loadout" class="hover:text-white transition">Arsenal</a>
-        <a href="#work" class="hover:text-white transition">Selected Decks</a>
-        <a href="#connect" class="hover:text-white transition">Touchpoints</a>
-      </nav>
 
       <!-- Action Button -->
       <a href="https://wa.me/919755013858" target="_blank"
@@ -113,10 +112,10 @@
     <!-- ================= HERO SECTION ================= -->
     <section class="max-w-5xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-12 border-b border-zinc-900/80">
       <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-        
+
         <!-- Headline & Bio -->
         <div class="space-y-5 text-center md:text-left flex-1">
-          
+
           <!-- Category Badges -->
           <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-darkcard/90 backdrop-blur-md border border-darkborder text-[11px] font-bold text-brand uppercase tracking-wider shadow-sm">
@@ -138,20 +137,15 @@
               PORT<span class="text-brand italic">FOLIO.</span>
             </h1>
             <p class="text-sm sm:text-base font-bold text-zinc-200 pt-1">
-              Ansh Sharma <span class="text-brand">— Founder @ AeroGrow Media</span>
+              Scaling Direct-to-Consumer Brands with Data-Driven Ad Creatives and High-Converting Funnels.
             </p>
           </div>
 
-          <!-- Bio -->
-          <p class="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto md:mx-0 leading-relaxed font-medium">
-            Specialized in high-conversion brand identities, scroll-stopping social content, and organic viral scaling.
-          </p>
-
-          <!-- Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-3">
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
             <a href="https://wa.me/919755013858" target="_blank"
-               class="px-6 py-3 rounded-full bg-brand hover:bg-brandHover text-black font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xl shadow-brand/20 transition hover:scale-105">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
+               class="px-6 py-3 rounded-full bg-brand hover:bg-brandHover text-black font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-brand/20 transition hover:scale-105">
+              <i data-lucide="message-circle" class="w-4 h-4 fill-black"></i>
               WhatsApp Direct
             </a>
             <a href="https://www.instagram.com/aerogrowmedia" target="_blank"
@@ -165,26 +159,17 @@
 
         <!-- Hero Profile Frame Card -->
         <div class="w-64 sm:w-72 rounded-3xl bg-darkcard/90 backdrop-blur-md border border-darkborder p-3.5 shadow-2xl space-y-3">
-          <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950">
+          <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-950 flex items-center justify-center">
             <img 
               src="profile.jpg.png" 
               alt="Ansh Sharma" 
-              class="w-full h-full object-cover object-top"
-              onerror="this.onerror=null; this.src='profile.png'; this.onerror=function(){this.src='profile.jpg';};"
+              class="w-full h-full object-cover"
+              onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center text-zinc-500 p-4 text-center\'><i data-lucide=\'user\' class=\'w-12 h-12 text-brand mb-2\'></i><span class=\'text-xs font-mono\'>profile.jpg.png</span></div>'; lucide.createIcons();"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
-            
-            <div class="absolute bottom-2.5 inset-x-2.5 p-2.5 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 text-center">
-              <p class="font-bebas text-base text-white tracking-wider">ANSH SHARMA</p>
-              <p class="text-[10px] text-brand font-bold uppercase tracking-wider">Designer & Marketer</p>
-            </div>
           </div>
-
-          <div class="px-2 py-1 flex items-center justify-between text-[11px] text-zinc-400">
-            <span class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open for Q4
-            </span>
-            <span class="font-mono text-zinc-500">INDORE, IN</span>
+          <div class="px-1 text-center">
+            <h2 class="font-bebas text-xl text-white tracking-wide">Ansh Sharma</h2>
+            <p class="text-[11px] text-brand font-mono font-semibold uppercase tracking-wider">Growth Engineer @ AeroGrow</p>
           </div>
         </div>
 
@@ -216,9 +201,8 @@
       <div class="flex items-center justify-between">
         <div>
           <p class="text-xs uppercase font-extrabold tracking-widest text-brand">/// SOFTWARE LOADOUT</p>
-          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">CREATIVE ARSENAL.</h2>
+          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">Core Tech Stack</h2>
         </div>
-        <span class="text-xs font-mono text-zinc-500">SPECS 2026</span>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
@@ -227,7 +211,7 @@
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Ps</div>
           <div>
             <h3 class="text-xs font-bold text-white">Photoshop</h3>
-            <p class="text-[10px] text-zinc-400">Posters & Comps</p>
+            <p class="text-[11px] text-zinc-400">Ad Creative Design</p>
           </div>
         </div>
 
@@ -236,7 +220,7 @@
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Ai</div>
           <div>
             <h3 class="text-xs font-bold text-white">Illustrator</h3>
-            <p class="text-[10px] text-zinc-400">Logos & Vectors</p>
+            <p class="text-[11px] text-zinc-400">Vector & Identity</p>
           </div>
         </div>
 
@@ -244,8 +228,8 @@
         <div class="p-5 rounded-2xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-3">
           <div class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-brand font-bebas text-2xl flex items-center justify-center">Pr</div>
           <div>
-            <h3 class="text-xs font-bold text-white">Editing</h3>
-            <p class="text-[10px] text-zinc-400">Short-Form Reels</p>
+            <h3 class="text-xs font-bold text-white">Premiere Pro</h3>
+            <p class="text-[11px] text-zinc-400">Hooks & Video Ads</p>
           </div>
         </div>
 
@@ -256,7 +240,7 @@
           </div>
           <div>
             <h3 class="text-xs font-bold text-white">Growth Hub</h3>
-            <p class="text-[10px] text-zinc-400">Paid & Organic</p>
+            <p class="text-[11px] text-zinc-400">Meta & Google Ads</p>
           </div>
         </div>
       </div>
@@ -267,37 +251,26 @@
       <div class="flex items-center justify-between">
         <div>
           <p class="text-xs uppercase font-extrabold tracking-widest text-brand">FEATURED PROJECT DECKS</p>
-          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">STAGE 01 — 02.</h2>
+          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">Selected Case Studies</h2>
         </div>
-        <span class="text-xs font-mono text-zinc-500">2026 ARCHIVE</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
         <!-- Case 01 -->
         <article class="p-6 sm:p-8 rounded-3xl bg-darkcard/90 backdrop-blur-md border border-darkborder hover:border-brand/40 transition space-y-5 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-brand font-mono text-[11px] font-bold">STAGE 01</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-brand/10 text-brand text-[10px] font-bold uppercase tracking-wide">340% Reach Spike</span>
+              <span class="text-xs text-zinc-500 font-mono">D2C E-Commerce</span>
             </div>
-            
-            <div>
-              <p class="text-[11px] font-black uppercase tracking-widest text-brand">Viral Short-Form Architecture</p>
-              <h3 class="font-bebas text-3xl sm:text-4xl text-white uppercase leading-none mt-1">
-                ORGANIC REELS SCALING
-              </h3>
-            </div>
-
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white uppercase leading-none mt-1">Direct-Response Creative Pivot</h3>
             <p class="text-xs text-zinc-400 leading-relaxed">
-              Designed high-retention thumbnail packaging, dynamic pacing hooks, and custom graphic overlays that drove over 340% organic expansion for brand partners.
+              Restructured paid ad creative strategy using high-velocity UGC hook testing and angle diversification, scaling monthly ad spend efficiently.
             </p>
           </div>
-
-          <div class="flex flex-wrap gap-2 pt-2 border-t border-zinc-900">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Thumbnail Design</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Reels Pacing</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Photoshop</span>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs">
+            <span class="text-brand font-mono font-bold">+280% Net Revenue</span>
+            <span class="text-zinc-500 font-mono">3.4x ROAS</span>
           </div>
         </article>
 
@@ -306,41 +279,26 @@
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <span class="px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-brand font-mono text-[11px] font-bold">STAGE 02</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-brand/10 text-brand text-[10px] font-bold uppercase tracking-wide">Brand Rollout</span>
+              <span class="text-xs text-zinc-500 font-mono">Brand Growth</span>
             </div>
-            
-            <div>
-              <p class="text-[11px] font-black uppercase tracking-widest text-brand">AeroGrow Media Agency</p>
-              <h3 class="font-bebas text-3xl sm:text-4xl text-white uppercase leading-none mt-1">
-                VISUAL IDENTITY & PITCH DECKS
-              </h3>
-            </div>
-
+            <h3 class="font-bebas text-3xl sm:text-4xl text-white uppercase leading-none mt-1">Full-Funnel Organic Engine</h3>
             <p class="text-xs text-zinc-400 leading-relaxed">
-              Complete visual identity suite for AeroGrow Media—creating vector logo marks, client pitch presentation templates, and corporate proposal collateral.
+              Implemented an architecture of short-form organic video hooks paired with high-intent DM automation to capture qualified client leads.
             </p>
           </div>
-
-          <div class="flex flex-wrap gap-2 pt-2 border-t border-zinc-900">
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Brand Guidelines</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Pitch Decks</span>
-            <span class="px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300 font-medium">Illustrator</span>
+          <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-xs">
+            <span class="text-brand font-mono font-bold">125K+ Net Reach</span>
+            <span class="text-zinc-500 font-mono">Zero Ad Spend</span>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- ================= ALL CHANNELS & PROFILES ================= -->
-    <section id="connect" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 space-y-6">
-      <div class="flex items-center justify-between">
-        <div>
-          <p class="text-xs uppercase font-extrabold tracking-widest text-brand">DIRECT CHANNELS</p>
-          <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">CONNECT WITH ANSH.</h2>
-        </div>
-        <span class="px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold font-mono">
-          OPEN FOR WORK
-        </span>
+    <!-- ================= CONNECT & CHANNELS ================= -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-8 py-14 space-y-6">
+      <div>
+        <p class="text-xs uppercase font-extrabold tracking-widest text-brand">/// DIRECT CHANNELS</p>
+        <h2 class="font-bebas text-4xl sm:text-5xl text-white tracking-wide uppercase mt-1">Let's Build Something</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
@@ -352,11 +310,11 @@
               <i data-lucide="message-circle" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">WhatsApp</p>
+              <p class="text-xs font-bold text-white">WhatsApp</p>
               <p class="text-[11px] text-zinc-400">+91 9755013858</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
 
         <!-- AeroGrow Media -->
@@ -367,11 +325,11 @@
               <i data-lucide="building-2" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">AeroGrow Media</p>
+              <p class="text-xs font-bold text-white">Agency</p>
               <p class="text-[11px] text-zinc-400">@aerogrowmedia</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
 
         <!-- Growth IG -->
@@ -382,11 +340,11 @@
               <i data-lucide="trending-up" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">Marketing Profile</p>
+              <p class="text-xs font-bold text-white">Growth Insights</p>
               <p class="text-[11px] text-zinc-400">@ansh_grows</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
 
         <!-- Personal IG -->
@@ -397,11 +355,11 @@
               <i data-lucide="instagram" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">Personal Profile</p>
-              <p class="text-[11px] text-zinc-400">_.ansh._.sharma._</p>
+              <p class="text-xs font-bold text-white">Personal</p>
+              <p class="text-[11px] text-zinc-400">@_.ansh._.sharma._</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
 
         <!-- LinkedIn -->
@@ -412,11 +370,11 @@
               <i data-lucide="linkedin" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">LinkedIn</p>
+              <p class="text-xs font-bold text-white">LinkedIn</p>
               <p class="text-[11px] text-zinc-400">Ansh Sharma</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
 
         <!-- Email -->
@@ -427,15 +385,14 @@
               <i data-lucide="mail" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs font-bold text-white uppercase">Email Direct</p>
-              <p class="text-[11px] text-zinc-400 truncate max-w-[140px]">ansh.sharma.work3@gmail.com</p>
+              <p class="text-xs font-bold text-white">Direct Email</p>
+              <p class="text-[11px] text-zinc-400">ansh.sharma.work3@gmail.com</p>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand transition"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-500 group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
         </a>
       </div>
     </section>
-
   </main>
 
   <!-- ================= FOOTER ================= -->
@@ -443,17 +400,16 @@
     <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 text-center sm:text-left">
       <div class="flex items-center gap-1.5">
         <span class="font-bebas text-lg text-white">ANSH SHARMA</span>
-        <span class="text-brand">✕</span>
-        <span class="font-bebas text-lg text-white">AEROGROW MEDIA</span>
+        <span class="text-zinc-600">/</span>
+        <span>AeroGrow Media &copy; 2026</span>
       </div>
-      <p>© <span id="year"></span> Ansh Sharma. All rights reserved.</p>
-      <p class="text-[10px] font-mono uppercase tracking-widest text-zinc-600">Precision Growth & Visual Design</p>
+      <p class="text-zinc-500">Engineered for Performance & Scale</p>
     </div>
   </footer>
 
+  <!-- Initialize Lucide Icons -->
   <script>
     lucide.createIcons();
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
